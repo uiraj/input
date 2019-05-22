@@ -1,0 +1,35 @@
+
+<html>
+<p>{{title}}</p>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-2" >
+            <button class="btn btn-success"  (click)="onlyodd= !onlyodd">show only odd number</button>
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:40%"></div>
+            <br><br>
+            <ul class="list-group">
+                <div *ngIf="onlyodd">
+                    <li class="list-group-item" *ngFor="let odd of oddnumbers">
+                        {{ odd }}
+                    </li>
+                </div>
+                <div *ngIf="!onlyodd">
+                    <li class="list-group-item" *ngFor="let even of evennumbers">
+                        {{ even }}
+                    </li>
+                </div>
+
+            </ul>
+
+
+        </div>
+        <div class="row">
+            <div class=".col-xs-2"></div>
+
+            <div class=".col-xs-8"></div>
+
+        </div>
+    </div>
+
+</div>
+</html>
